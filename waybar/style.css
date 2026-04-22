@@ -1,0 +1,123 @@
+* {
+    border: none;
+    border-radius: 100px;
+    font-family: "Inter", "Roboto", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* The main bar */
+window#waybar {
+    background: transparent;
+    border-bottom: transparent;
+    color: #FFFFFF;
+    /* Fixed: changed 'white' to 'all' or 'background' */
+    transition: all .5s ease;
+    border-radius: 0px;
+}
+
+/* Modern Workspace styling */
+#workspaces button {
+    padding: 0 10px;
+    color: #FFFFFF;
+    background: transparent;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Apply rounded pills to all modules at once */
+#clock, #pulseaudio, #network, #memory, #custom-power, #workspaces {
+    border-radius: 50px;
+    background-color: #282828;
+    color: #EBDBB2;
+    border: 2px solid #353535;
+    padding: 0 15px;
+    margin: 4px 3px;
+    font-family: 'Courier New', monospace;
+}
+
+#workspaces button.focused {
+    color: #FFFFFF;
+    background: #282B31;
+    border-bottom: 3px solid #98C379;
+}
+
+/* Specific color for Network when disconnected */
+#network.disconnected {
+    background-color: #E06C75;
+}
+
+/* Tooltip cleanup */
+tooltip {
+    background: #1E2127;
+    border-radius: 10px;
+    border: 1px solid #282B31;
+}
+
+tooltip label {
+    color: #FFFFFF;
+    padding: 8px;
+}
+
+/* Taskbar specific button handling */
+/* #taskbar button {
+    background: transparent;
+    border: none;
+    padding: 0 5px;
+    margin: 0 2px;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+} */ 
+
+/* #taskbar button.active {
+    background-color:  #282B31;
+    border-radius: 20px;
+} */
+
+/* Unified Hover Effect for all modules */
+#workspaces button:hover, 
+/* #taskbar button:hover, */
+#pulseaudio:hover,
+#clock:hover,
+#memory:hover,
+#network:hover,
+#custom-power:hover {
+    padding: 0 20px;
+    background-color:  #282828;
+    border-radius: 100px;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* #taskbar button:hover image {
+    min-width: 22px;
+    min-height: 22px;
+} */
+
+/* #taskbar.empty {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+} */
+/* 
+    background-color: #282828;
+    color: #EBDBB2;
+    border: 2px solid #353535;
+*/
+#workspaces button.focused {
+    border-radius: 100;
+    background-color: #FFFFFF;
+    color: #282828;
+    border-bottom: 3px solid #353535;
+    border-color: #1E2127;
+}
+
+/* Workspaces with activity but not focused */
+#workspaces button.urgent {
+    background-color: #ff5555;
+    color: #EBDBB2;
+}

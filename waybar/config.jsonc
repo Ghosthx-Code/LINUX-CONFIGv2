@@ -1,0 +1,84 @@
+{
+    "layer": "overlay",
+    "height": 40,
+    "margin-top":5,
+    "margin-left":10,
+    "margin-right":10,
+    "margin-bottom":0,
+    "position": "bottom",
+    "modules-left": ["custom/power", "memory", "sway/workspaces"], 
+    "modules-center": ["clock"],
+    "modules-right": ["network", "pulseaudio"],
+    "custom/power": {
+      "format": "",
+      "on-click": "bash ~/.config/rofi/menu/menu.sh",
+      "tooltip": false
+    },
+    "clock": {
+        "tooltip": false,
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+
+    "pulseaudio": {
+        "tooltip": false,
+        "format": "{volume}% {icon}",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", ""]
+        }
+    },
+
+    "network": {
+        "tooltip": false,
+        "on-click": "bash ~/.config/rofi/menu/main/wifi.sh",
+        "format-wifi": "[$]{essid}",
+        "format-ethernet": "[?]{ifname}",
+        "format-disconnected": "[!]{essid}"
+    },
+
+    "memory": {
+    "tooltip": false,
+    "interval": 30,
+    "format": "{}%",
+    "max-length": 10
+},
+"wlr/taskbar": {
+    "tooltip": false,
+    "format": "{icon}",
+    "icon-size": 20,
+    "max-width": 50,
+    "on-click": "activate",
+    "all-outputs": true,
+    "on-click-middle": "close",
+    "ignore-list": [
+        "Alacritty"
+    ],
+    "app_ids-mapping": {
+        "firefoxdeveloperedition": "firefox-developer-edition"
+    }
+},
+"sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}",
+    "format-icons": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "urgent": "!",
+        "focused": "*",
+        "default": ""
+    },
+        "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
+    }
+}
+
+}
